@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Asistencia</title>
+    <link rel="stylesheet" href="registros.css">
+    <script defer src="busqueda.js"></script> 
+</head>
+<body>
+    <header>
+        <img src="img/logo.jpg" alt="Logo" class="logo">
+        <h1>Registro de Asistencia</h1>
+        <nav>
+            <ul>
+                <li><a href="pagina.html">Inicio</a></li>
+                <li><a href="registros.html">Registro de Asistencia</a></li>
+                <li><button class="btn-cerrar-sesion" id="cerrar-sesion-btn"><strong>Cerrar Sesión</strong></button></li>
+    </header>
+
+    <main>
+        <section class="registro">
+            <h2>Lista de Asistencia</h2>
+
+            <h3>Llena los datos para buscar a un alumno</h3>
+            <div class="busqueda">
+                <input type="text" id="matricula" placeholder="Matrícula">
+                <input type="text" id="nombre" placeholder="Nombre">
+                <input type="date" id="fecha">
+                <button class="btn-buscar" onclick="buscarAlumno()"><strong>Buscar</strong></button>
+            </div>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Matrícula</th>
+                        <th>Nombre</th>
+                        <th>Carrera</th>
+                        <th>Fecha</th>
+                        <th>Hora Entrada</th>
+                        <th>Hora Salida</th>
+                        <th>Salió de la Universidad</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-asistencia">
+                    <tr><td>20231001</td><td>Ana López</td><td>Desarrollo en Software</td><td>2025-02-01</td><td>08:00 AM</td><td>01:00 PM</td><td>Sí</td></tr>
+                    <tr><td>20231002</td><td>Carlos Pérez</td><td>Mecatronica</td><td>2025-02-01</td><td>08:05 AM</td><td>02:00 PM</td><td>Sí</td></tr>
+                    <tr><td>20231003</td><td>Beatriz Gómez</td><td>Logistica</td><td>2025-02-01</td><td>08:10 AM</td><td>--</td><td>No</td></tr>
+                    <tr><td>20231004</td><td>David Sánchez</td><td>Entornos Virtuales</td><td>2025-02-01</td><td>08:15 AM</td><td>12:30 PM</td><td>Sí</td></tr>
+                    <tr><td>20231005</td><td>Elena Torres</td><td>Mecatronica</td><td>2025-02-01</td><td>08:20 AM</td><td>--</td><td>No</td></tr>
+                    <tr><td>20231006</td><td>Fernando Ruiz</td><td>Desarrollo de Software</td><td>2025-02-01</td><td>08:25 AM</td><td>03:00 PM</td><td>Sí</td></tr>
+                    <tr><td>20231007</td><td>Gabriela Flores</td><td>Mecanica</td><td>2025-02-01</td><td>08:30 AM</td><td>01:15 PM</td><td>Sí</td></tr>
+                    <tr><td>20231008</td><td>Hugo Martínez</td><td>Redes</td><td>2025-02-01</td><td>08:35 AM</td><td>--</td><td>No</td></tr>
+                    <tr><td>20231009</td><td>Isabel Herrera</td><td>Entornos Virtuales</td><td>2025-02-01</td><td>08:40 AM</td><td>02:10 PM</td><td>Sí</td></tr>
+                    <tr><td>20231010</td><td>Jorge Ramírez</td><td>Logistica</td><td>2025-02-01</td><td>08:45 AM</td><td>--</td><td>No</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>&copy; 2025 Universidad Tecnológica de Coahuila</strong></p>
+    </footer>
+    <script>
+
+        document.getElementById('cerrar-sesion-btn').addEventListener('click', function(event) {
+            event.preventDefault(); 
+
+            const confirmar = confirm("¿Está seguro de que quiere cerrar sesión?");
+            
+            if (confirmar) {
+                window.location.href='inicio.html'; 
+            }
+        });
+    </script>
+</body>
+</html>

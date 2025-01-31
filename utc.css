@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #123456;
+    background-image: url('img/imagen5.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 249, 249);
+    text-align: center;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+}
+
+header {
+    background: rgba(0, 51, 102, 0.8);
+    padding: 15px;
+    display: flex;
+    align-items: center;  
+    background: rgba(0, 51, 102, 0.8);
+    padding: 20px;
+    justify-content: space-between; 
+}
+
+.logo {
+    width: 150px; 
+    height: auto;
+}
+
+h1 {
+    margin: 0;
+    color: #00ff00;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.seguridad {
+    background: rgba(9, 104, 0, 0.685);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.carrusel-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.carrusel {
+    display: flex;
+    width: 400%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    flex: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.63);
+    color: rgb(0, 255, 34);
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+footer {
+    background: rgba(0, 51, 102, 0.8);
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.btn-cerrar-sesion, .btn-buscar {
+    background-color: #00ff00;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-cerrar-sesion:hover, .btn-buscar:hover {
+    background-color: #a200ff;
+    transform: scale(1.05);
+}
+
+.btn-cerrar-sesion:active, .btn-buscar:active {
+    background-color: #47fff6;
+}

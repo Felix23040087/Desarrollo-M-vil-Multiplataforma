@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Asistencia UTC</title>
+    <link rel="stylesheet" href="utc.css">
+    <script defer src="carrusell.js"></script>
+    <script defer src="busqueda.js"></script>
+</head>
+<body>
+    <header>
+        <img src="img/logo.jpg" alt="Logo" class="logo">
+        <h1>Bienvenido a Asistencia UTC</h1>
+        <nav>
+            <ul>
+                <li><a href="pagina.html">Inicio</a></li>
+                <li><a href="registros.html">Registro de Asistencia</a></li>
+                <li><button class="btn-cerrar-sesion" id="cerrar-sesion-btn"><strong>Cerrar Sesión</strong></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="seguridad">
+            <h2>Compromiso con la Seguridad y Asistencia de nuestros Estudiantes</h2>
+            <p><strong>
+                En la Universidad Tecnológica de Coahuila, nos preocupamos por la seguridad y bienestar de nuestra comunidad estudiantil.  
+                Implementamos protocolos avanzados para garantizar un entorno seguro mediante el uso de tecnología IoT.  
+                Nuestro sistema de asistencia monitorea las entradas y salidas en tiempo real, asegurando que todos los alumnos estén protegidos.  
+                Además, contamos con cámaras de seguridad, personal capacitado y procesos estrictos para el control de accesos.  
+                La UTC sigue comprometida con la innovación y el cuidado de nuestros estudiantes.
+            </strong>
+            </p>
+        </section>
+
+        <!-- Carrusel -->
+        <section class="carrusel-container">
+            <div class="carrusel">
+                <div class="slide">
+                    <img src="img/imagen1.jpg" alt="Imagen 1">
+                </div>
+                <div class="slide">
+                    <img src="img/imagen2.jpg" alt="Imagen 2">
+                </div>
+                <div class="slide">
+                    <img src="img/imagen3.jpg" alt="Imagen 3">
+                </div>
+                <div class="slide">
+                    <img src="img/imagen4.jpg" alt="Imagen 4">
+                </div>
+            </div>
+            <button class="prev" onclick="moverSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moverSlide(1)">&#10095;</button>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>&copy; 2025 Universidad Tecnológica de Coahuila</strong></p>
+    </footer>
+
+    <script>
+        document.getElementById('cerrar-sesion-btn').addEventListener('click', function(event) {
+            event.preventDefault();
+            const confirmar = confirm("¿Está seguro de que quiere cerrar sesión?");
+
+            if (confirmar) {
+                window.location.href='inicio.html';
+            }
+        });
+    </script>
+</body>
+</html>
